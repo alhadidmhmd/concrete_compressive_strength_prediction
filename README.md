@@ -57,13 +57,16 @@ Univariate Analysis dapat dilakukan dengan menampilkan visualisasi data histogra
 #### Multivariate Analysis
 Multivariate EDA menunjukkan hubungan antara dua atau lebih variabel pada data. Multivariate EDA yang menunjukkan hubungan antara dua variabel biasa disebut sebagai bivariate EDA. Untuk mengamati hubungan antara fitur numerik, kita akan menggunakan fungsi pairplot(). Kita juga akan mengobservasi korelasi antara fitur numerik dengan fitur target menggunakan fungsi corr().
 ![Multivariate Analysis](https://github.com/alhadidmhmd/project_picture/blob/main/Project%20Picture/multi1.jpg?raw=true)
+
 ![Multivariate Analysis](https://github.com/alhadidmhmd/project_picture/blob/main/Project%20Picture/multi2.jpg?raw=true)
+
 Setelah mengobservasi korelasi antara fitur numerik dengan fitur target, beberapa fitur memiliki korelasi positif terhadap fitur target yang kita gunakan (CompressiveStrength) seperti Superplasticizer, Age, dan Cement. Sedangkan fitur lainnya memiliki korelasi negatif terhadap fitur target.
 
 #### Memeriksa Outliers
 ![Outliers](https://github.com/alhadidmhmd/project_picture/blob/main/Project%20Picture/outlier1.jpg?raw=true)
 ![Outliers](https://github.com/alhadidmhmd/project_picture/blob/main/Project%20Picture/outlier2.jpg?raw=true)
 ![Outliers](https://github.com/alhadidmhmd/project_picture/blob/main/Project%20Picture/outlier3.jpg?raw=true)
+
 Untuk menangani outliers, kita perlu memvisualisasikan tiap fitur apakah terdapat outlier atau tidak dengan menggunakan visualisasi data boxplot. Setelah melakukan visualisasi, dapat kita lihat bahwa terdapat outliers pada beberapa fitur numerik dalam dataset Concrete.
 
 ## Data Preparation
@@ -121,18 +124,22 @@ Berdasarkan potongan code di atas, berikut adalah parameter-parameter yang digun
 ## Evaluasi Model
 Metrik yang biasa  digunakan pada prediction model atau model regresi adalah ini adalah MSE atau Mean Squared Error yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi.
 ![MSE](https://github.com/alhadidmhmd/project_picture/blob/main/Project%20Picture/MSE.jpg?raw=true)
+
 Keterangan:
-N = jumlah dataset
-yi = nilai sebenarnya
-y_pred = nilai prediksi
+- N = jumlah dataset
+- yi = nilai sebenarnya
+- y_pred = nilai prediksi
 
 Namun, sebelum menghitung nilai MSE dalam model, kita perlu melakukan proses scaling fitur numerik pada data uji. Sebelumnya, kita baru melakukan proses scaling pada data latih untuk menghindari kebocoran data. Sekarang, setelah model selesai dilatih dengan 3 algoritma, yaitu KNN, Random Forest, dan Adaboost, kita perlu melakukan proses scaling terhadap data uji. Hal ini harus dilakukan agar skala antara data latih dan data uji sama dan kita bisa melakukan evaluasi.
 ![Scaling](https://github.com/alhadidmhmd/project_picture/blob/main/Project%20Picture/scalingeval.jpg?raw=true)
 Selanjutnya, kita evaluasi ketiga model kita dengan metrik MSE.
 ![Evaluation](https://github.com/alhadidmhmd/project_picture/blob/main/Project%20Picture/eval1.jpg?raw=true)
 ![Evaluation](https://github.com/alhadidmhmd/project_picture/blob/main/Project%20Picture/eval2.jpg?raw=true)
+
 ![Evaluation](https://github.com/alhadidmhmd/project_picture/blob/main/Project%20Picture/eval3.jpg?raw=true)
+
 ![Evaluation](https://github.com/alhadidmhmd/project_picture/blob/main/Project%20Picture/eval4.jpg?raw=true)
+
 Setelah melakukan evaluasi, dapat disimpulkan bahwa model Random Forest (RF) memberikan nilai eror yang paling kecil. Dengan demikian, model RF akan kita pilih sebagai model terbaik untuk melakukan prediksi kuat tekan beton.
 
 ## Kesimpulan
