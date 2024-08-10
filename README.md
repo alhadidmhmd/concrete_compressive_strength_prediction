@@ -20,7 +20,7 @@ Dalam konteks penelitian dan aplikasi praktis, pemahaman yang mendalam tentang f
 ### Goals
 
 - Mengetahui karakteristik apa yang paling berpengaruh terhadap kuat tekan beton.
-- Membuat model machine learning yang dapat menprediksi kuat tekan beton berdasarkan fitur-fitur yang ada.
+- Membuat model machine learning yang dapat memprediksi kuat tekan beton berdasarkan fitur-fitur yang ada.
 
 ### Solution statements
 - Permasalahan yang harus diselesaikan pada proyek ini adalah permasalahan regresi karena proyek ini bertujuan untuk memprediksi kuat tekan beton berdasarkan karakteristik tertentu.
